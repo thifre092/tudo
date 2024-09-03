@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diversão</title>
+    <style>
+        #principal {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        #principal > div {
+            border: solid 2px #ccc;
+            border-radius: 10px;
+            text-align: center;
+            padding: 10px;
+            width: 150px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title"><a href="index.html">Diversão</a></h1>
+    <nav>
+        <a class="nava" href="memes.html">Memes</a>
+        <a class="nava" href="python.html">Python</a>
+    </nav>
+
+    <h1>Números</h1>
+
+    <div id="search-area" style="text-align: center; margin-bottom: 20px;">
+        <input type="number" id="search-number" placeholder="Digite um número de 1 a 10" style="padding: 5px; font-size: 16px;" min="1" max="10">
+        <button onclick="goToNumber()" style="padding: 5px 10px; font-size: 16px; cursor: pointer;">Ir</button>
+    </div>
+
+    <div id="principal"></div>
+
+    <script>
+        function generateNumbers() {
+            const container = document.getElementById("principal");
+            for (let i = 1; i <= 10; i++) {
+                const numberDiv = document.createElement("div");
+                numberDiv.id = `num-${i}`;
+
+                // Adiciona o conteúdo base da caixa
+                numberDiv.innerHTML = `<h2>${i}</h2><p>Descrição para o número ${i}</p>`;
+
+                // Se for o número 5, adiciona uma imagem
+                if (i === 5) {
+                    const img = document.createElement("img");
+                    img.src = "https://via.placeholder.com/150";  // URL da imagem pública
+                    img.alt = "Imagem do número 5";
+                    numberDiv.appendChild(img);
+                }
+
+                container.appendChild(numberDiv);
+            }
+        }
+
+        function goToNumber() {
+            const number = document.getElementById("search-number").value;
+            const element = document.getElementById(`num-${number}`);
+            if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+            } else {
+                alert("Número não encontrado!");
+            }
+        }
+
+        window.onload = generateNumbers;
+    </script>
+</body>
+</html>

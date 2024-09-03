@@ -1,0 +1,36 @@
+div#principal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Centraliza os itens dentro do contêiner principal */
+    padding: 20px; /* Adiciona espaço ao redor do contêiner principal */
+    background-color: #f0f8ff; /* Fundo suave para o contêiner principal */
+    border-radius: 15px; /* Bordas arredondadas para o contêiner principal */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para o contêiner principal */
+}
+
+div#principal > div {
+    border: solid 2px #1e90ff; /* Borda azul para os itens */
+    border-radius: 15px; /* Bordas arredondadas */
+    text-align: center;
+    padding: 15px;
+    background-color: #e6f7ff; /* Fundo leve azul para os itens */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para os itens */
+    transition: transform 0.2s, box-shadow 0.2s; /* Transição suave para transformações */
+}
+
+div#principal > div:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
+}
+
+h2 {
+    font-size: xx-large;
+    color: #1e90ff; /* Cor azul para o título dos números */
+    margin-bottom: 10px; /* Espaçamento abaixo dos títulos */
+}
+
+p {
+    font-size: medium;
+    color: #333; /* Cor de texto mais escura para melhor legibilidade */
+}

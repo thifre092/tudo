@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diversão</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="python.css">
+</head>
+
+<body>
+    <h1 id="title"><a href="index.html">Diversão</a></h1>
+    <nav>
+        <a class="nava" href="jogos.html">Jogos</a>
+        <a class="nava" href="memes.html">Memes</a>
+        <a class="nava" href="numeros.html">Números</a>
+    </nav>
+    <h1>Python</h1>
+
+    <details>
+        <summary>Sumario</summary>
+        <ul>
+            <a href="#conceitos-basicos">Conceitos básicos</a>
+            <ul>
+                <li><a href="#comentarios">Comentarios</a></li>
+                <li><a href="#função-print">Função print</a></li>
+            </ul>
+            <a href="#variaveis">Variaveis</a>
+            <ul>
+                <li><a href="#declarar-variaveis">Declarar variaveis</a></li>
+                <li><a href="#tipos-primitivos">Tipos primitivos</a></li>
+                <li><a href="#outros-tipos-de-valores">Outros tipos de valores</a></li>
+                <li><a href="#operadores-relacionais">Operadores relacionais</a></li>
+            </ul>
+            <a href="#listupdic">Listas, Tuplas e dicionários</a>
+            <ul>
+                <li><a href="#listas">Listas</a></li>
+                <li><a href="#alterando-listas">Adicionando itens em uma listas</a></li>
+                <li><a href="#tuplas">Tuplas</a></li>
+                <li><a href="#dicionarios">Dicionários</a></li>
+            </ul>
+            <a href="#if-elif-else">if, elif e else</a>
+            <ul>
+                <li><a href="#if">if</a></li>
+            </ul>
+        </ul>
+    </details>
+
+    <h2 id="conceitos-basicos">Conceitos básicos</h2>
+    <div class="topico">
+        <div class="codigo">
+
+            <h3 id="comentarios">Comentários</h3>
+
+            <pre class="caixa">
+#comentário
+
+#comentário mais top
+
+#comentário 1
+#comentário 2
+
+#====================#
+#comentário chamativo#
+#====================#       
+            </pre>
+
+            <p>OBS: Os comentário serão utilizados para esclarecer um código</p>
+        </div>
+
+        <div class="explicação">
+
+            <p>Para adicionar um comentário em python basta usar um "#" no começo da linha</p>
+
+            <p>Não é necessário ter outro "#" no final da linha</p>
+
+            <p>Comentários só tem uma linha, caso você queira um comentário maior, use dois "#", um para cada linha</p>
+
+            <p>Se você quiser fazer um comentário que se destaque dos outros, você pode fazer algo similar ao 
+                ultimo exemplo
+            </p>
+        </div>
+
+        <div class="codigo">
+
+            <h3 id="função-print">Função print</h3>
+
+            <pre class="caixa">
+print("ola")
+
+print(1) 
+
+print("eu tenho",15,"anos.") 
+            </pre>
+        </div>
+
+        <div class="explicação">
+            <p>print é uma função(será explicado mais adiante), para usa-la, basta digitar "print" seguido de 
+                parenteses, dentro do parenteses coloque o que você quer que seja imprimido
+            </p>
+
+            <p>Se você quiser imprimir um texto, coloque ele entre aspas, se você quiser imprimir um número ou
+                um bool(vou explciar em breve), não coloque as aspas
+            </p>
+
+            <p>Se você quiser misturar os dois casos, separe os diferente tipos de valores com virgulas</p>
+
+            <p>No console, os exemplos aparecerão da seguinte forma respectivamente: ola, 1, eu tenho 15 anos.</p>
+        </div>
+    </div>
+
+    <h2 id="variaveis">Variáveis</h2>
+
+    <div class="topico">
+
+        <div class="codigo">
+
+            <h3 id="declarar-variaveis">Declarar variaveis</h3>
+
+            <pre class="caixa">
+var = 1
+
+var2 = "batata"
+
+eu_odeio_jurandy = True
+
+professores_legais = ["Moisés","Cadu","Renan","Fernanda","Lavaniery"]
+
+num = 1
+num = 6
+
+x = 3
+y = 4
+x = y
+
+p1,p2,p3 = 1,2,3
+b1,b2,b3 = 10
+            </pre>
+
+            <p>OBS: Variaveis serão referidas como var</p>
+        </div>
+
+        <div class="explicação">
+            <p>Para criar uma variavel e atribuir um valor a ela, digite o nome que você quer(não pode começar 
+                com números ou caracteres especiais com exceção do _ ), digite =, e o valor que você quer dar 
+                para essa variavel
+            </p>
+
+            <p>Você pode reatribuir um valor a uma varivael, como mostra o exemplo do "num", originalmente seu
+                valor era 1, esse valor foi reatribuido e passou a ser 6
+            </p>
+
+            <p>Você também pode atribuir o valor de uma variavel a outra variavel, no exemplo, x=3 e y=4, e 
+                depois o valor de y foi atribuido a x, resultado em x=4
+            </p>
+
+            <p>Você também pode atribuir o valor a mais de uma variavel por vez, basta colocar uma virgula para 
+                cada elemento, então no exemplo, p1=1,p2=2,p3=3 e b1, b2 e b3 valem 10
+            </p>
+        </div>
+
+        <div class="codigo">
+
+            <h3 id="tipos-primitivos">Tipos primitivos</h3>
+
+            <pre class="caixa">
+i = 1
+f = 1.0
+s = "Ola"
+b = True
+            </pre>
+
+            <p>OBS: 1 é diferente de 1.0</p>
+            <p>OBS2: os tipos primitivos serão referidos como int, float, str e bool, respectivamente</p>
+        </div>
+
+        <div class="explicação">
+            <p>Em python, existem 4 tipos primitivos, inteiros, float, string e booleano</p>
+
+            <p>Os inteiros são todos os números que fazem parte do conjunto dos inteiros, e os floats são os 
+                números que fazem parte do conjunto dos racionais, para escrever um float, escreva ele com um 
+                ponto(não pode ser virgula), então no exemplo, "i" é um inteiro e "f" é um float
+            </p>
+
+            <p>Os strings são basicamente texto, e para escreve-los é necessário coloca-los entre aspas</p>
+
+            <p>E os bool são só 2, True e False, para escreve-los, não use aspas e comece com letra maiuscula, 
+                além disso é possivel escreve-los usando operadores relacionais(sera explicado em breve)
+            </p>
+
+        </div>
+
+        <div class="codigo">
+
+            <h3 id="outros-tipos-de-valores">Outros tipos de valores</h3>
+
+            <pre class="caixa">
+lista = [1,2,3,4]
+tupla = (True, False, False, True)
+dicionario = {pernas: 2, olhos: 2, cabeça: 1, dedos: 20}
+            </pre>
+
+        </div>
+
+        <div class="explicação">
+            <p>Os itens mostrados acima são estruturas de dados composta, ou seja, armazenam mais de um 
+                elemento
+            </p>
+
+            <p>O primeiro é uma lista, o segundo uma tupla, e o terceiro um dicionário, para criar uma lista, 
+                usa-se [], para uma tupla (), e para um dicionário {}, todos serão explicados mais detalhadamente 
+                depois
+            </p>
+
+            <p>Para separar os elementos, basta usar uma virgula</p>
+        </div>
+
+        <div class="codigo">
+
+            <h3 id="operadores-relacionais">Operadores relacionais</h3>
+
+            <pre class="caixa">
+x = 1
+y = 2
+z = 5
+ex1 = 1 == 1 #True
+ex2 = x == 1 #True
+ex3 = y != 5 #True
+ex4 = 4 < z #True
+ex5 = x > z #False
+ex6 = x <= 0 #False
+ex7 = y >= 2 #True
+            </pre>
+        </div>
+
+        <div class="explicação">
+            <p>Para comparar dois valores, usa-se o operadore relacionais(jurandy ama isso), eles vão retornar
+                um bool True ou false dependendo do resultado, se a condição for versadeira como no ex2, retorna 
+                True, e ser for falso, como no ex5, retorna False
+            </p>
+
+            <p>O primeiro e segundo exemplos mostra o comparador igual(==), que diz se dois valores são iguais, 
+                o terceiro exemplo mostra o diferente de(!=), que é o oposto do igual
+            </p>
+
+            <p>O quarto e quinto exemplos mostram o menor que(<) e maior que(>), que indica se o valor é menor ou 
+                maior que o outro, e o sexto e setimo exemplos mostram o menor ou igual que(<=) e maior ou igual 
+                que(>=), que indica se um valor é maior, menor ou igual a outro
+            </p>
+        </div>
+    </div>
+
+    <h2 id="listupdic">Listas, tuplas e dicionários</h2>
+
+    <div class="topico">
+
+        <div class="codigo">
+            <h3 id="listas">Listas</h3>
+            <pre class="caixa">
+lista = [1,2,3,4]
+print(lista) #aparecerá 1,2,3,4 no console
+print(lista[0]) #aparecerá 1 no console
+print(lista[-1]) #aparecerá 4 no console
+print(lista[-3]) #aparecerá 2 no console
+print(lista[6]) #aparecerá um erro
+print(lista[-10]) #aparecerá um erro
+print(lista[0:2]) #aparecerá 1,2
+print(lista[2:4]) #aparecerá 3,4
+            </pre>
+
+            <p>OBS: O básico de listas já foi explicado anteriormente</p>
+        </div>
+
+        <div class="explicação">
+            <p>Para acessar uma lista, basta digitar seu nome, para acessar um item especifico da lista, você 
+                digita o nome da lista, um [], e o númeor do item da lista(os itens começam no 0)
+            </p>
+
+            <p>Então se você quiser acessar o primeiro item de uma lista, coloque 0 nos [], o segundo item de 
+                lista, coloque 1, e assim sucessivamente
+            </p>
+
+            <p>Outra forma de acessar um item é usando um número negativo, então se você usar -1, será acessado 
+                o ultimo item da lista, -2, o penultimo item da lista, -3, antipenultimo, e assim por diante
+            </p>
+
+            <p>Se você tentar acessar um item que não existe, ocorrerá um erro</p>
+
+            <p>Outra forma de chamar um item, é usando ":",da seguite forma: lista[começo:fim], no local indicado 
+                como "começo", coloque o indice do primeiro elemento que você quer chamar, e no local indicado 
+                "final", coloque o elemento que você quer que pare de chamar, então se você colocar [0:3], os 
+                itens, 0,1 e 2 serão chamados
+            </p>
+        </div>
+
+        <div class="codigo">
+            <h3 id="alterando-listas">Alterando listas</h3>
+
+            <pre class="caixa">
+lista = [1,2,3,4]
+lista.append(5)
+lista.insert(0,0)
+print(lista) #aparecerá 0,1,2,3,4,5
+
+numeros = [1,2,3,4,5,6,7,8,9,10]
+del numeros[3]
+del numeros[-1]
+print(numeros) #aparecerá 1,2,3,5,6,7,8,9
+del numeros
+            </pre>
+        </div>
+
+        <div class="explicação">
+            <p>As duas principais formas de adicionar itens em uma lista, são pelos métodos append, e insert, 
+                para usar um método, coloque um ".", o nome do método, e um ()
+            </p>
+
+            <p>O método append simplismente coloca o que estiver dentro do () no final da lista, então no código 
+                exemplo, o "5" será colocado no final da lista
+            </p>
+
+            <p>Já o método insert, permite que você escolha onde colocar o item, usando a seguinte lógica: 
+                objeto.insert(localização, valor), no exemplo, o valor "0" será colocado no local 0(primeiro 
+                item da lista)
+            </p>
+
+            <p>Para deletar um item de uma lista, ou uma lista toda, você usa a instrução del, como mostra o 
+                exemplo, para deletar um item especifico, basta dizer qual item você quer deletar, e para deletar 
+                a lista toda, basta colocar o nome da lista
+            </p>
+        </div>
+
+        <div class="codigo">
+            <h3 id="tuplas">Tuplas</h3>
+
+            <pre class="caixa">
+tupla = (0,1,2,3,4,5)
+tupla.append #gerará um erro
+del tupla 
+            </pre>
+        </div>
+
+        <div class="explicação">
+            <p>Uma tupla é como uma lista, mas ela é imutavel, ou seja, não é possivel adicionar ou remover 
+                itens, mas é possivivel deletar uma tupla inteira
+            </p>
+
+            <p>Para chamar um item de uma tupla, é da mesma forma que em uma lista</p>
+        </div>
+
+        <div class="codigo">
+            <h3 id="dicionarios">Dicionários</h3>
+
+            <pre class="caixa">
+dic = {
+    "Portugues": True, "Matematica": True, 
+    "Química": True, "I_programação": False, 
+    "Filosofia": False
+}
+dic["ETD"] = False
+dic.update({"Autoria_web": True, "E_fisica": True})
+del dic["Matematica"]
+print(dic["Portugues"]) #saída: True
+del dic #deleta todo o dicionário
+
+dic2 = {"a": 1, "b": 2, "c": 3}
+print(dic2) #saída:{"a": 1, "b": 2, "c": 3}
+
+            </pre>
+        </div>
+
+        <div class="explicação">
+            <p>Um dicionário é uma estrutura de dados que armazena pares de chave-valor, ou seja, tem um valor 
+                associado a uma chave. Ao chamar um item de um dicionário, use a chave, e a saída será o valor 
+                associado
+            </p>
+
+            <p>Para adicionar um valor e uma chave a um dicionário, digite o nome do dicionário, depois digite 
+                [], e dentro deles digite o nome da chave, e dpois, digite igual ao valor da chave. Outra forma 
+                de adicionar itens em um dicionário é usando o método update, dentro do [], coloque o nome da 
+                chave, e seu valor
+            </p>
+
+            <p>Para deletar um item, você pode usar o del, e o a chave associada a um valor, isso deletará, a 
+                chave e o valor associado.
+            </p>
+        </div>
+    </div>
+
+    <h2 id="if-elif-else">if, elif e else</h2>
+
+    <div class="topico">
+
+        <div class="codigo">
+            <h3 id="if">if</h3>
+
+            <pre class="caixa">
+x = 1
+y = 2
+if x == 1:
+    print("x vale 1")
+if y > 10:
+    print("y é maior que 10")
+            </pre>
+        </div>
+
+        <div class="explicação">
+            <p>Em python, para tomar decisões, usamos estruturas de controle de fluxo, if-elif-else. Veremors 
+                cada um separadamente, então vamos começar com if
+            </p>
+
+            <p>O comando "if" verifica se uma condição é verdadeira, se ela for, o código dentro do "if" é 
+                executado. No código ao lado, temos 2 exemplos, no primeiro, se "x" for igual a 1, a frase "x 
+                vale 1" será impressa, como a variavel x foi declarada com o valor 1, então a condição é 
+                verdadeira, e o código dentro do "if" será executado
+            </p>
+
+            <p>No segundo exemplo, o código está verificando se "y" é maior que 10, se sim, a frase "y é maior 
+                que 10" será impressa, como "y" vale 2, a condição é falsa, logo, nada acontecerá</p>
+        </div>
+    </div>
+</body>
+
+</html>
